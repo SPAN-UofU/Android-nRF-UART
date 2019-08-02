@@ -18,9 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34b1d28-7f1d-4389-956a-5d2dda19f29e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Android-nRF-UART.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/UartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/UartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,39 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="298" column="53" selection-start-line="298" selection-start-column="53" selection-end-line="298" selection-end-column="53" />
-              <folding>
-                <element signature="e#13001#13174#0" expanded="true" />
-                <element signature="e#13173#13174#0" expanded="true" />
-                <element signature="e#17471#17695#0" expanded="true" />
-                <element signature="e#17694#17695#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/ReconnectJobService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="377">
+              <caret line="407" column="56" lean-forward="true" selection-start-line="407" selection-start-column="56" selection-end-line="407" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -90,39 +65,9 @@
             <state relative-caret-position="255">
               <caret line="214" column="24" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
               <folding>
-                <element signature="e#4016#4042#0" expanded="true" />
-                <element signature="e#4574#4600#0" expanded="true" />
-                <element signature="e#4874#5083#0" expanded="true" />
-                <element signature="e#5082#5083#0" expanded="true" />
-                <element signature="e#5884#6168#0" expanded="true" />
-                <element signature="e#6120#6133#0" expanded="true" />
-                <element signature="e#6167#6168#0" expanded="true" />
-                <element signature="e#6308#6323#0" expanded="true" />
-                <element signature="e#6466#6479#0" expanded="true" />
-                <element signature="e#6574#6955#0" expanded="true" />
-                <element signature="e#6755#6937#0" expanded="true" />
-                <element signature="e#6936#6937#0" expanded="true" />
-                <element signature="e#6954#6955#0" expanded="true" />
-                <element signature="e#8186#8759#0" expanded="true" />
-                <element signature="e#8758#8759#0" expanded="true" />
-                <element signature="e#9271#9272#0" expanded="true" />
-                <element signature="e#9316#9317#0" expanded="true" />
-                <element signature="e#9381#9382#0" expanded="true" />
-                <element signature="e#9433#9434#0" expanded="true" />
-                <element signature="e#9498#9499#0" expanded="true" />
-                <element signature="e#9537#9538#0" expanded="true" />
-                <element signature="e#10948#10963#0" expanded="true" />
+                <element signature="e#11712#11713#0" expanded="true" />
                 <element signature="e#11780#11781#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/UartService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="201" selection-start-line="201" selection-end-line="201" />
             </state>
           </provider>
         </entry>
@@ -188,28 +133,23 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2069" />
-    <option name="y" value="461" />
-    <option name="width" value="2616" />
-    <option name="height" value="1471" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1" />
+    <option name="width" value="1922" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="Android-nRF-UART" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Android-nRF-UART" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="Android-nRF-UART" type="1abcf292:AndroidViewProjectNode" />
@@ -230,9 +170,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,10 +288,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2069" y="461" width="2616" height="1471" extended-state="0" />
+    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23307393" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1638207" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -363,12 +303,12 @@
       <window_info anchor="bottom" id="Run" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Android Profiler" order="3" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32962137" />
       <window_info anchor="bottom" id="Terminal" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50233465" side_tool="true" visible="true" weight="0.32962137" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49766538" visible="true" weight="0.32962137" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49883267" weight="0.26726058" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5037353" side_tool="true" visible="true" weight="0.3104189" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49626467" visible="true" weight="0.3104189" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49839914" weight="0.42574257" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49844357" weight="0.32962137" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32962137" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -401,28 +341,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_element.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_detail.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/title_bar.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dis_values.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/sdf.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/QueryPreferences.java" />
@@ -437,47 +377,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_list.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/bluetooth/BluetoothAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="135" column="31" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/bluetooth/BluetoothDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-23/android/bluetooth/BluetoothDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2625">
-          <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/ReconnectWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/ReconnectJobProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/bluetooth/BluetoothAdapter.java" />
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/bluetooth/BluetoothDevice.java" />
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-23/android/bluetooth/BluetoothDevice.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/ReconnectWorker.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/ReconnectJobProcessor.java" />
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -485,13 +392,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="1237" column="19" selection-start-line="1237" selection-start-column="19" selection-end-line="1237" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/app/Activity.java" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -510,62 +411,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/DeviceListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="214" column="24" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
-          <folding>
-            <element signature="e#4016#4042#0" expanded="true" />
-            <element signature="e#4574#4600#0" expanded="true" />
-            <element signature="e#4874#5083#0" expanded="true" />
-            <element signature="e#5082#5083#0" expanded="true" />
-            <element signature="e#5884#6168#0" expanded="true" />
-            <element signature="e#6120#6133#0" expanded="true" />
-            <element signature="e#6167#6168#0" expanded="true" />
-            <element signature="e#6308#6323#0" expanded="true" />
-            <element signature="e#6466#6479#0" expanded="true" />
-            <element signature="e#6574#6955#0" expanded="true" />
-            <element signature="e#6755#6937#0" expanded="true" />
-            <element signature="e#6936#6937#0" expanded="true" />
-            <element signature="e#6954#6955#0" expanded="true" />
-            <element signature="e#8186#8759#0" expanded="true" />
-            <element signature="e#8758#8759#0" expanded="true" />
-            <element signature="e#9271#9272#0" expanded="true" />
-            <element signature="e#9316#9317#0" expanded="true" />
-            <element signature="e#9381#9382#0" expanded="true" />
-            <element signature="e#9433#9434#0" expanded="true" />
-            <element signature="e#9498#9499#0" expanded="true" />
-            <element signature="e#9537#9538#0" expanded="true" />
-            <element signature="e#10948#10963#0" expanded="true" />
-            <element signature="e#11780#11781#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/UartService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="2385">
           <caret line="201" selection-start-line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="298" column="53" selection-start-line="298" selection-start-column="53" selection-end-line="298" selection-end-column="53" />
-          <folding>
-            <element signature="e#13001#13174#0" expanded="true" />
-            <element signature="e#13173#13174#0" expanded="true" />
-            <element signature="e#17471#17695#0" expanded="true" />
-            <element signature="e#17694#17695#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,6 +432,24 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/DeviceListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="214" column="24" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
+          <folding>
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#11780#11781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="407" column="56" lean-forward="true" selection-start-line="407" selection-start-column="56" selection-end-line="407" selection-end-column="56" />
         </state>
       </provider>
     </entry>

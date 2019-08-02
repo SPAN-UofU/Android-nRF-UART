@@ -406,7 +406,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                     // store connected device
                     Log.d(TAG, "..storing lastDeviceAddress= " + deviceAddress);
                     DevicePreferences.setLastDevice(getApplicationContext(), deviceAddress);
-                    mService.connect(lastDeviceAddress);
+                    mService.connect(deviceAddress);
 
 
                 }
