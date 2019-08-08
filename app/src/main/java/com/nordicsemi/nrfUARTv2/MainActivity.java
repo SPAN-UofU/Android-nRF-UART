@@ -26,6 +26,9 @@ package com.nordicsemi.nrfUARTv2;
 
 
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.util.Date;
@@ -35,11 +38,8 @@ import com.nordicsemi.nrfUARTv2.UartService;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothManager;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -49,22 +49,18 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.res.Configuration;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -118,7 +114,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 if(!isBTConnected())
                     mService.connect(lastDeviceAddress);
                 if(!isBTConnected()) {
-                    Log.d(TAG, "Failed to connect, try again later..");
+                    Log.d(TAG, "Failed to connect to "+lastDeviceAddress+", try again later..");
                     handler.postDelayed(this, 10000);
                 }
             }
@@ -292,7 +288,9 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                      public void run() {
                          try {
                          	String text = new String(txValue, "UTF-8");
-                         	String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
+                             Log.d(TAG, text); // we want this to write a file instead, maybe w/filter
+                             appendLog(text);
+                             String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
                         	 	listAdapter.add("["+currentDateTimeString+"] RX: "+text);
                         	 	messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
                         	
@@ -311,6 +309,40 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             
         }
     };
+
+    public void appendLog(String text)
+    {
+        String logFileName = "/nRF-UART/" + "nRF-UART.log";
+        File logFile = new File(Environment.getExternalStorageDirectory(), logFileName);
+
+        try {
+            File dir = new File(Environment.getExternalStorageDirectory(), "/nRF-UART");
+
+            if (!logFile.exists()) {
+                dir.mkdir();
+                logFile.createNewFile();
+            }
+
+
+            FileOutputStream stream = new FileOutputStream(logFile, true);
+            stream.write(text.getBytes("UTF-8"));
+            stream.close();
+
+        } catch (IOException e) {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+
+        broadCastToMediaScanner(getApplicationContext(),logFile);
+    }
+
+    // used to force mediascanner so files show up immediately USB share
+    public static void broadCastToMediaScanner(Context context, File file) {
+
+        Uri contentUri = Uri.fromFile(file);
+        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        mediaScanIntent.setData(contentUri);
+        context.sendBroadcast(mediaScanIntent);
+    }
 
     private void service_init() {
         Intent bindIntent = new Intent(this, UartService.class);
@@ -406,7 +438,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                     // store connected device
                     Log.d(TAG, "..storing lastDeviceAddress= " + deviceAddress);
                     DevicePreferences.setLastDevice(getApplicationContext(), deviceAddress);
-                    mService.connect(deviceAddress);
+                    if(deviceAddress != null)
+                        mService.connect(deviceAddress);
 
 
                 }
