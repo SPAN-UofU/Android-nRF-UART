@@ -31,6 +31,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -167,6 +168,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             			startActivityForResult(newIntent, REQUEST_SELECT_DEVICE);
         			} else {
         				//Disconnect button pressed
+                        appendLog(); // user disconnects, so write out log. Maybe better when exit prog?
         				if (mDevice!=null)
         				{
         				    mUserDisconnect = true;
@@ -288,12 +290,16 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                      public void run() {
                          try {
                          	String text = new String(txValue, "UTF-8");
-                             Log.d(TAG, text); // we want this to write a file instead, maybe w/filter
-                             appendLog(text);
-                             String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
-                        	 	listAdapter.add("["+currentDateTimeString+"] RX: "+text);
+                             //Log.d(TAG, text); // we want this to write a file instead, maybe w/filter
+                             //appendLog(text);
+                             Date date = new Date();
+                             DateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
+                             String currentDateTimeString = sdf.format(date);
+                             //Log.d(TAG, "current datetime is "+currentDateTimeString);
+
+                             listAdapter.add("["+currentDateTimeString+"] RX: "+text);
                         	 	messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
-                        	
+                        	 Log.d(TAG, listAdapter.getItem(3));
                          } catch (Exception e) {
                              Log.e(TAG, e.toString());
                          }
@@ -310,9 +316,13 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         }
     };
 
-    public void appendLog(String text)
+    public void appendLog()
     {
-        String logFileName = "/nRF-UART/" + "nRF-UART.log";
+        Date date = new Date();
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH꞉mm꞉ss"); //note these are not the regular colon char so windows can use it
+        String stringDate = sdf.format(date);
+
+        String logFileName = "/nRF-UART/" + stringDate + " nRF-UART.log";
         File logFile = new File(Environment.getExternalStorageDirectory(), logFileName);
 
         try {
@@ -325,7 +335,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
 
 
             FileOutputStream stream = new FileOutputStream(logFile, true);
-            stream.write(text.getBytes("UTF-8"));
+            for (int position = 0; position < listAdapter.getCount(); position++)
+                stream.write(listAdapter.getItem(position).getBytes());
             stream.close();
 
         } catch (IOException e) {
